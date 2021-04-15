@@ -1,20 +1,12 @@
 const express = require('express');
-// const Sentry = require('@sentry/node');
-// const asyncHandler = require('express-async-handler');
-// const { body, check, validationResult } = require('express-validator');
 const HttpError = require('./utils/HttpError');
 const { errorHandler } = require('./routes/utils');
 const helper = require('./routes/utils');
-const captureRouter = require('./routes/captureRouter');
+const captureRouter = require('./routes/capture_router');
 const registerEventHandlers = require('./services/EventHandlers');
 
 const app = express();
 
-//Sentry.init({ dsn: config.sentry_dsn });
-
-/*
- * Check request
- */
 app.use(
   helper.handlerWrapper(async (req, _res, next) => {
     if (
