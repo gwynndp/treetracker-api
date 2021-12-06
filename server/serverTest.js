@@ -6,7 +6,7 @@ const log = require('loglevel');
 const app = require('./app');
 
 const port = process.env.NODE_PORT || 3006;
-const seed = require('../__tests__/seed');
+const seed = require('./__tests__/seed');
 // set the log level
 require('./setup');
 

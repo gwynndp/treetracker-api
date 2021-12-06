@@ -8,14 +8,11 @@ class CaptureRepository extends BaseRepository {
   }
 
   async getByFilter(filterCriteria, options) {
-    console.log('PG REPOSITORY DB getByFilter', filterCriteria, options);
+    // console.log('CAPTURE REPOSITORY DB getByFilter', filterCriteria, options);
+
     // const query = Object.keys(filterCriteria).length
     //   ? filterCriteria
     //   : `id` > 10;
-    
-    const query = Object.keys(filterCriteria).length
-      ? filterCriteria
-      : `id` > 10;
 
     return this._session
       .getDB()

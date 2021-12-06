@@ -1,4 +1,3 @@
-
 const { v4: uuidv4 } = require('uuid');
 const log = require('loglevel');
 const Joi = require('joi');
@@ -102,9 +101,11 @@ const captureHandlerPatch = async function (req, res, next) {
     created_at: Joi.any().forbidden(),
   });
   try {
-    await updateCaptureSchema.unknown(true).validateAsync(req.body, {
-      abortEarly: false,
-    });
+    // const value = await updateCaptureSchema
+    //   .unknown(true)
+    //   .validateAsync(req.body, {
+    //     abortEarly: false,
+    //   });
     const result = await executeUpdateCapture({ id: capture_id, ...req.body });
     res.send(result);
     res.end();

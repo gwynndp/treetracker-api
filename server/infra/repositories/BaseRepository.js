@@ -29,7 +29,7 @@ class BaseRepository {
    *  offset: number
    */
   async getByFilter(filter, options) {
-    console.log('BASE REPOSITORY getByFilter', filter, options);
+    // console.log('BASE REPOSITORY getByFilter', filter, options);
     const whereBuilder = function (object, builder) {
       let result = builder;
       if (object.and) {
@@ -97,7 +97,6 @@ class BaseRepository {
   }
 
   async update(object) {
-    console.log(JSON.stringify(object));
     const result = await this._session
       .getDB()(this._tableName)
       .update(object)

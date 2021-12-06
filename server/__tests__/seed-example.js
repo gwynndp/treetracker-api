@@ -3,7 +3,7 @@
  */
 const uuid = require('uuid');
 const log = require('loglevel');
-const knex = require('./server/infra/database/knex');
+const knex = require('../infra/database/knex');
 
 // Example of a database seed using knex
 // This follows from the wallet microservice
