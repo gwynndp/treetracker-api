@@ -6,3 +6,4 @@ database.json
 .nyc_output
 
 tmp
+.DS_Store
